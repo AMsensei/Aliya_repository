@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="box1" style="background-color: red;">Yksi</div>
+    <div id="box2" style="background-color: red;">Kaksi</div>
+    <div id="box3" style="background-color: red;">Kolme</div>
+    <div id="box4" style="background-color: red;">Neljä</div>
+    <div id="box5" style="background-color: red;">Viisi</div>
+</div>
+
+<div class="wrapper2">
+    <div id="box11" style="background-color: greenyellow; ">Yksi</div>
+    <div id="box22" style="background-color: greenyellow;">Kaksi</div>
+    <div id="box33" style="background-color: greenyellow;">Kolme</div>
+    <div id="box44" style="background-color: greenyellow;">Neljä</div>
+    <div id="box55" style="background-color: greenyellow;">Viisi</div>
+</div>
+
+<style>
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .wrapper div {
+        border: 1px solid black;
+        height: 50px;
+    }
+    
+
+    .wrapper2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 50px;
+        gap: 0;  
+    }
+
+    .wrapper2 div {
+        border: 1px solid black;
+    }
+
+    #box11 {
+        grid-column: 1 / -1;
+    }
+
+
+    #box22 {
+        grid-row: span 3;
+    }
+
+    #box55 {
+        grid-column: 2;
+    }
+
+</style>
+    
+</body>
+</html>

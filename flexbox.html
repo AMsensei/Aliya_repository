@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body>
+    
+<div class="wrapper">
+    <div id="box1" style="background-color: red;">Yksi</div>
+    <div id="box2" style="background-color: green;">Kaksi</div>
+    <div id="box3" style="background-color: greenyellow;">Kolme</div>
+    <div id="box4" style="background-color: aqua;">Neljä</div>
+    <div id="box5" style="background-color: yellow;">Viisi</div>
+</div>
+
+<div class="wrapper2">
+    <div id="box11" style="background-color: red;">Yksi</div>
+    <div id="box22" style="background-color: red;">Kaksi</div>
+    <div id="box33" style="background-color: red;">Kolme</div>
+    <div id="box44" style="background-color: red;">Neljä</div>
+    <div id="box55" style="background-color: red;">Viisi</div>
+</div>
+
+<style>
+
+    .wrapper2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .wrapper2 div {
+
+        height: 50px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px;
+        border: 1px solid black;
+        width: 300px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wrapper div {
+        width: 300px;
+        height: 150px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px;
+        border: 1px solid black;
+        margin-right: 80px;
+    }
+
+
+    .wrapper2 div:nth-child(1) { flex: 1; }
+    .wrapper2 div:nth-child(2) { flex: 3; }
+    .wrapper2 div:nth-child(3) { flex: 1; }
+
+</style>
+</body>
+</html>
