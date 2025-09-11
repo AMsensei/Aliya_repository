@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body>
+    
+<div class="wrapper">
+    <div id="box1" style="background-color: red;">Yksi</div>
+    <div id="box2" style="background-color: green;">Kaksi</div>
+    <div id="box3" style="background-color: greenyellow;">Kolme</div>
+    <div id="box4" style="background-color: aqua;">Neljä</div>
+    <div id="box5" style="background-color: yellow;">Viisi</div>
+</div>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wrapper div {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+</style>
+</body>
+</html>
